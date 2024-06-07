@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - IML470</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+ 
+  <style>
+   body {
+      height: 100%; 
+      margin: 0;
+      padding: 0;
+      background-image: url(images/bg3.jpg);
+      background-size: cover; 
+      background-position: center; 
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); 
+      position: relative; 
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #F2B1B1;
+      font-family: 'Playfair Display';
+    }
+
+    h2 {
+      font-family: 'Montserrat';
+      color: #af7886;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: justify; 
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+      font-size: 1.2em; 
+    }
+
+    .interests {
+      margin-top: 30px;
+    }
+
+    .interests a:hover {
+      text-decoration: underline;
+    }
+
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td, #customers th {
+      border: 1px solid #443131;
+      padding: 23px;
+    }
+
+    #customers tr:nth-child(even) {
+      background-color: #a696ff80;
+    }
+
+    .logo {
+      width: 30px; 
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px; 
+      margin-top: 40px; 
+      margin-bottom: 40px; 
+    }
+
+    .clock {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .footer {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 15px;
+      border: 2px solid black;
+      width: max-content;
+      border-radius: 25px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 5px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 15px;
+      margin-top: 30px;
+      border: 2px solid black;
+      width: max-content;
+      border-radius: 25px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 5px;
+      font-weight: bold;
+    }
+
+    
+    .hamburger {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+      padding-top: 60px;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .menu a:hover {
+      background-color: #f4f4f4;
+    }
+
+    .show-menu {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div id="menu" class="menu">
+      <a href="index.html">Home</a>
+      <a href="bio.html">About Me</a>
+      <a href="photo.html">My Content</a>
+      <a href="studies.html">View Courses</a>
+    </div>
+
+    
+    <div id="clock" class="clock"></div>
+
+    <h1>About Me</h1>
+    <div class="contact-info">
+      <h2>Feel Free to Contact Me</h2>
+      <p>
+        <img src="images/images.png" alt="Email Logo" class="logo">
+        Email: nrsbrna8803@gmail.com
+      </p>
+      <p>
+        <img src="images/instagram.png" alt="Instagram Logo" class="logo">
+        Instagram: nycto.ruby 
+        <a href="https://www.instagram.com/nycto.ruby?igsh=MXIybTdwZXRpdW9rbw==">visit here</a>
+      </p>
+      <p>
+        <img src="images/facebook 2.jpg" alt="facebook Logo" class="logo">
+        Facebook: Nur Sabrina 
+        <a href="https://www.facebook.com/profile.php?id=100069697550797&mibextid=ZbWKwL">visit here</a>
+      </p>
+      <p>
+        <img src="images/youtube.jpg" alt="youtube Logo" class="logo">
+        Youtube: Nur Sabrina 
+        <a href="https://www.youtube.com/channel/UC9z4kheVD7eVS0dOpX0gNew">visit here</a>
+      </p>
+    </div>
+
+    <div class="bio" style="margin-top: 40px;">
+      <h2>My Short Bio</h2>
+      <p>
+        My name is Nur Sabrina binti Abdul Gahfar, born on August 8, 2003. I'm a 21-year-old native of Selangor and a student at UiTM Rembau, Negeri Sembilan, pursuing a Bachelor's in Information Science (Honours) Library Management (CDIM260). My favorite food is Laksa and any spicy dishes. In my free time, I enjoy working on diamond paintings and paint-by-number projects. I also love listening to music because it is soothing and pleasing to my heart.
+      </p>
+    </div>
+
+    <div class="buttons">
+      <button onclick="location.href='photo.html'">My Content</button>
+      <button onclick="location.href='studies.html'">View Courses</button>
+    </div>
+
+    <div class="footer">
+      This website was created as part of IML470
+    </div>
+
+    <footer>&#169; NUR SABRINA, 2024</footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('show-menu');
+    }
+
+    function updateClock() {
+      var now = new Date();
+      var hours = now.getHours().toString().padStart(2, '0');
+      var minutes = now.getMinutes().toString().padStart(2, '0');
+      var seconds = now.getSeconds().toString().padStart(2, '0');
+      var timeString = hours + ':' + minutes + ':' + seconds;
+      document.getElementById('clock').textContent = timeString;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); 
+  </script>
+
+</body>
+</html>

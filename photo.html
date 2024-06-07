@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - IML470</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('images/bg3.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      color: #333;
+      height: 100vh; 
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); 
+    }
+    h1 {
+      font-family: 'Playfair Display';
+      background-color: #F2B1B1;
+      color: rgb(37, 35, 35);
+      text-align: center;
+      margin-top: 5%;
+    }
+    p {
+      line-height: 1.6;
+      text-align: justify; 
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20px;
+      padding: 15px;
+    }
+    .bio {
+      margin-top: 40px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px; 
+      margin-top: 20px; 
+    }
+
+    .content {
+      display: none; 
+    }
+
+    .content.photos, .content.music, .content.video {
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center;
+      gap: 20px; 
+    }
+
+    .content.music, .content.video {
+      justify-content: center; 
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content.music video, .content.video video {
+      width: 300px; 
+      height: 500px; 
+      object-fit: cover; 
+    }
+
+    .content.video a {
+      text-align: center;
+      display: block;
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .buttons button {
+      margin: 10px; 
+    }
+
+    .clock {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    footer {
+      text-align: center; 
+      font-size: 15px;
+      margin-top: 30px;
+      border: 2px solid black;
+      width: max-content;
+      border-radius: 25px;
+      padding: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+      padding-top: 60px;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .menu a:hover {
+      background-color: #f4f4f4;
+    }
+
+    .show-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div id="clock" class="clock"></div>
+
+    <h1>Media Medley</h1>
+    <p>This section displays the photos I've taken, the music I've edited, and one of my favorite art videos that I've saved. My deep interest in art drives me to constantly explore and watch art videos for inspiration and enjoyment. I love immersing myself in different forms of creative expression and learning from them.</p>
+
+    <div class="bio">
+      
+      <div class="buttons">
+        <button onclick="toggleContent('photos')">Photos</button>
+        <button onclick="toggleContent('music')">Music</button>
+        <button onclick="toggleContent('video')">Videos</button>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div id="menu" class="menu">
+        <a href="index.html">Home</a>
+        <a href="bio.html">About Me</a>
+        <a href="photo.html">My Content</a>
+        <a href="studies.html">View Courses</a>
+      </div>
+  
+      <div class="content photos">
+        <div class="photo"><img src="images/leo.jpg" alt="Shared Photo" width="250" height="250"></div>
+        <div class="photo"><img src="images/bear.jpg" alt="Shared Photo" width="250" height="250"></div>
+        <div class="photo"><img src="images/elephant.jpg" alt="Shared Photo" width="250" height="250"></div>
+        <div class="photo"><img src="images/merdeka.jpg" alt="Shared Photo" width="250" height="250"></div>
+      </div>
+
+      <div class="content music">
+        <video controls>
+          <source src="videos/video_2024-06-03_19-33-40.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <div class="content video">
+        <video controls>
+          <source src="videos/Snaptik.app_7294253968585280811.mp4" type="video/mp4">
+        </video>
+        <a href="https://www.tiktok.com/@username/video/7294253968585280811" target="_blank">Click Here</a>
+      </div>
+
+      <div class="buttons">
+        <button onclick="location.href='bio.html'" style="display: block; margin: auto;">BACK</button>
+      </div>
+    
+      <div class="footer" style="text-align: center; font-size: 15px; margin-top: 30px; border: 2px solid black; width: max-content; border-radius: 25px; display: block; margin-left: auto; margin-right: auto; padding: 5px;">
+        This website was created as part of IML470
+      </div>
+
+      <footer style="text-align: center; font-size: 15px; margin-top: 30px; border: 2px solid black; width: max-content; border-radius: 25px; display: block; margin-left: auto; margin-right: auto; padding: 5px; font-weight: bold;">
+        &#169; NUR SABRINA, 2024
+      </footer>
+  </div>
+
+  <script>
+    function toggleContent(type) {
+      var contents = document.querySelectorAll('.content');
+      contents.forEach(function(content) {
+        content.style.display = 'none'; 
+      });
+
+      var activeContent = document.querySelector('.' + type);
+      activeContent.style.display = 'flex'; 
+    }
+
+    function updateClock() {
+      var now = new Date();
+      var hours = now.getHours().toString().padStart(2, '0');
+      var minutes = now.getMinutes().toString().padStart(2, '0');
+      var seconds = now.getSeconds().toString().padStart(2, '0');
+      var timeString = hours + ':' + minutes + ':' + seconds;
+      document.getElementById('clock').textContent = timeString;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); 
+
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('show-menu');
+    }
+  </script>
+</body>
+</html>
